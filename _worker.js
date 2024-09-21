@@ -148,6 +148,47 @@ export default {
 				// const url = new URL(request.url);
 				switch (url.pathname.toLowerCase()) {
 				case '/':
+                        //Add
+                        const html = `<!DOCTYPE html>
+                        <style>
+                            .center-absolute {
+                              display: grid;
+                              place-items: center;
+                            }
+                            img {
+                              width: 100%;
+                              height: auto;
+                            }
+                          // .center-absolute {
+                          //   position: absolute;
+                          //   top: 50%;
+                          //   left: 50%;
+                          //   transform: translate(-50%, -50%);
+                        
+                          //   margin-left: auto;
+                          //   margin-right: auto;
+                          //   width: 50%;
+                          //   text-align: center;
+                          //   display: flex;
+                          //   justify-content: center;
+                          //   align-items: center;
+                          // }
+                        </style>
+                            <body>
+                              <div class="center-absolute">
+                              <h1>Hello World</h1>
+                                <p class="center-absolute">
+                                <img src="http://dounimei.us/wp-content/uploads/2021/06/2021061712154777.jpg" class="swiper-lazy">    <img src="http://dounimei.us/wp-content/uploads/2021/06/2021061712154876.jpg" class="swiper-lazy">    <img src="http://dounimei.us/wp-content/uploads/2021/06/2021061712154961.jpg" class="swiper-lazy">    <img src="http://dounimei.us/wp-content/uploads/2021/06/2021061712154998.jpg" class="swiper-lazy">    <img src="http://dounimei.us/wp-content/uploads/2021/06/2021061712155076.jpg" class="swiper-lazy">
+                                <img src="http://dounimei.us/wp-content/uploads/2021/06/2021061717284524.jpg" class="swiper-lazy">    <img src="http://dounimei.us/wp-content/uploads/2021/06/2021061717285167.jpg" class="swiper-lazy">    <img src="http://dounimei.us/wp-content/uploads/2021/06/2021061717285269.jpg" class="swiper-lazy">    <img src="http://dounimei.us/wp-content/uploads/2021/06/2021061717285651.jpg" class="swiper-lazy">    <img src="http://dounimei.us/wp-content/uploads/2021/06/2021061717285823.jpg" class="swiper-lazy">
+				</p>
+                              </div>
+                              </body>`;
+                        return new Response(html, {
+                        headers: {
+                            "content-type": "text/html;charset=UTF-8",
+                        },
+                        }); 
+                        //end exit
 					const envKey = env.URL302 ? 'URL302' : (env.URL ? 'URL' : null);
 					if (envKey) {
 						const URLs = await ADD(env[envKey]);
